@@ -1,0 +1,89 @@
+Delivered-To: rinimatthews@gmail.com
+Received: by 2002:a17:906:404b:0:0:0:0 with SMTP id y11csp1098094ejj;
+        Fri, 25 Sep 2020 05:10:12 -0700 (PDT)
+X-Received: by 2002:a17:906:d045:: with SMTP id bo5mr2299824ejb.320.1601035812598;
+        Fri, 25 Sep 2020 05:10:12 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1601035812; cv=none;
+        d=google.com; s=arc-20160816;
+        b=H1UTcJE44OBtbxoYSJicMxZ4kMhdz59JCCFVe5pZJ8PGTiid306bOrgSuQXGHW3yGJ
+         u49IoKig7FYJoW/IzOTOex4RUEol8BcXDjLTX8HhszvEowSnYKT3oms6JJLP/0N0zaXO
+         rz5qgM4ahNdLVEEJ6Th0s0vpUBI1rR/63CpSEa1OS9N1cPQPR8GYEajLiNsSFwoM86nN
+         kocDFPzTKjSb9eJSQnQLOW7PZicAHiwTm1IHd4uCNqcxE81SPGqEJcDrIjIdJ9lQUj/Y
+         5KqKVv1SF1auZtPy1dERw017ekmGOkK+cAP5LqYSZXPfKj/heBrkR2iATpaQytKb8ZBJ
+         zEnA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=tXl04tRiLtTWWTE7momRIkvrvZHkbDK/9daYaGaJuwM=;
+        b=TKZGv54P91V+cmybiAr9waga2MLAg+Hg9dwxYVPNs2mnVW/4bdMUUGLKCTgXFIxoSh
+         Js+ryGNooC/qxEOFbldZqGcKe6QkyqrFWt1vZbOpe9lRYk8CsQp9AwbnV9MI0XC3thv5
+         0Uj54TU7/A48Y8GeosLf0EI5luYoaN7tc4PJFo1qCN+Fe4x0+IAINXIXgd2M7HZ0tzww
+         Isg6kB1FpZuuHpHwL4pIOliIh7hmGXr9DuEangaL3Di/E1XtAtGmitBXWoZZc6ykh9Da
+         tbSbVGqA0KarltFZr7QWC7e4Dl1O/6p7xc+K/mZozWTYQdjQKHo2Hd/3G1NPeU2jVLU+
+         W4SA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=smJXJZzq;
+       spf=pass (google.com: domain of cpentuser007@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=cpentuser007@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <cpentuser007@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id d9sor2328253edq.13.2020.09.25.05.10.12
+        for <rinimatthews@gmail.com>
+        (Google Transport Security);
+        Fri, 25 Sep 2020 05:10:12 -0700 (PDT)
+Received-SPF: pass (google.com: domain of cpentuser007@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=smJXJZzq;
+       spf=pass (google.com: domain of cpentuser007@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=cpentuser007@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=tXl04tRiLtTWWTE7momRIkvrvZHkbDK/9daYaGaJuwM=;
+        b=smJXJZzq37K4r40xnAdOWTLspqa4bcNXuSIFHi8LRoJwrUErkLrd1TR51uEt9IWg+D
+         eJ1JFtQAUE6Ug7sfYGONKp3DfHwiWdz2WkkNAzTwMwiK0L9GYJ1oa4iL1BDTuyLs3pO0
+         5DczXE+nAHDnpw1jlLxO+ksfdsBm8YqRahaN8lXePpK+UY0M4SoPwdBHwQL7qVgS9+ky
+         pJCtfMONpyYE/2Wx3FlGMQeQ8OGnbOhlE0xysBhVDyi5qjULiD9g3FFaD9fgX4iI+/gW
+         S2KiKHqLO047StJKODzt5ysUaN8MpbgW2vYyHR8fqFjGko5KICIBDSJrafnLZrj3JRnC
+         5eYA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=tXl04tRiLtTWWTE7momRIkvrvZHkbDK/9daYaGaJuwM=;
+        b=aNIjC+fm+J9W48+1mNfiXlB/0wwmsfrlw0bQuArUNXdkqHRquMw08WYW1DrjeKylm9
+         MebfxcJUknipP7GvKdfseG0Y2xno7oRSeDT/AVmsofgIsHjIHuzRoi6/dK3tEbS+YiFK
+         FktvznmEDggIlB1mXpOSuJa/AIMhylF9f/yCdYaC/llGZN8Bfnf3R5b3d3IBBEww4OGg
+         dc1Nxnxank2sti6TaRdAABYdtRGS8O4OZyw4sMD7WSlmeOGfw8h3h85uCfPHUj7xWRjc
+         5Cak2pWNi0xoreiNLt1hiG94JYJvSjWhShdRsJwoUp4SdZX4ZQGDT95ULWXR3e78G0gz
+         /ZZw==
+X-Gm-Message-State: AOAM5320eVKc1wfQkv0tprdO1DiF4HOgyLI3NVt7doMBVLTwxm1wGPlQ
+	ZaMffxD8CN72ritT/KTeteaH6kAxO5PTqw6HkFyAkbn463o=
+X-Google-Smtp-Source: ABdhPJxnsazPMXz9ieCgZW0IwHRjeJqvAc3Fj+Z8HoYCewolYYbBndT/5swECCgVs580uXPjuy3lcIO9sezXeBUidm4=
+X-Received: by 2002:aa7:d15a:: with SMTP id r26mr943470edo.181.1601035812125;
+ Fri, 25 Sep 2020 05:10:12 -0700 (PDT)
+MIME-Version: 1.0
+From: Cpent User <cpentuser007@gmail.com>
+Date: Fri, 25 Sep 2020 17:40:00 +0530
+Message-ID: <CAJobuEk3GBcxg1Z4wRy+1xRYnhLk_6zOZpbXPNB-1POdzm8jcQ@mail.gmail.com>
+Subject: Hello from Los Angeles
+To: rinimatthews@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000dabff105b0223234"
+
+--000000000000dabff105b0223234
+Content-Type: text/plain; charset="UTF-8"
+
+Hi there,
+
+How have you been? It's been a long time we met. We are going to have a
+business meeting in Los Angeles next month. Let's meet up soon!
+
+Regards.
+
+--000000000000dabff105b0223234
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi there,<div><br></div><div>How have you been? It&#39;s b=
+een a long time we met. We are going to have a business meeting in Los Ange=
+les next month. Let&#39;s meet up soon!<br><br>Regards.=C2=A0</div></div>
+
+--000000000000dabff105b0223234--
